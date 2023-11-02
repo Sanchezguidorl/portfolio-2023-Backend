@@ -7,14 +7,14 @@ const userRoutes= require('./routes/user.routes');
 const bodyParser = require("body-parser");
 
 const bodyParserOptions = {
-  limit: "50mb",
+  limit: "450mb",
 };
 
 app.use(express.json(bodyParserOptions));
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true, limit: "50mb" }));
+app.use(express.urlencoded({extended: true, limit: "450mb" }));
 app.use(studiesRoutes);
 app.use(userRoutes);
 app.use(projectsRoutes);
